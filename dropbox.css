@@ -1,0 +1,769 @@
+:root {
+    --dropbox-blue: #0061FE;
+    --dropbox-blue-hover: #0057E5;
+    --black: #1E1919;
+    --white: #FFFFFF;
+    --cream: #F7F5F2;
+    --gray: #524A3E;
+    --border: rgba(166, 158, 146, 0.6);
+    --heading: "Sharp Grotesk Medium 20 Regular", sans-serif;
+    --body: "Atlas Grotesk Web Regular Regular", sans-serif;
+    --shadow:
+        0px 8px 32px rgba(30, 25, 25, 0.05);
+    --ease: all 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--body);
+    background: var(--cream);
+
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+
+}
+
+::selection {
+    background: var(--dropbox-blue);
+    color: var(--white);
+}
+
+.hr {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 0.5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+    background-color: var(--white);
+    overflow: visible;
+
+}
+
+.head-leftside {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2.2rem;
+
+}
+
+.icon {
+    font-family: sharp Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+
+}
+
+.products {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 4px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.products:hover .mega-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.column h4 {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.column span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.column span:hover {
+    color: var(--dropbox-blue);
+}
+
+
+.solution {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.solution:hover {
+    color: var(--dropbox-blue-hover);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -300px;
+    width: 100vw;
+    background: var(--cream);
+    z-index: 1000;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 1000px;
+    background: white;
+    padding: 40px 60px;
+    display: flex;
+    gap: 500px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+}
+
+.solution:hover .mega-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.column h4 {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.column span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.column span:hover {
+    color: var(--dropbox-blue);
+}
+
+.enterprise {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.enterprise:hover {
+    color: var(--dropbox-blue-hover);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+.pricing {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.pricing:hover {
+    color: var(--dropbox-blue-hover);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+.icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+
+}
+
+
+.head-rightside {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2.0rem;
+    font-size: 1rem;
+}
+
+.contact-sales {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.contact-sales:hover {
+    color: var(--dropbox-blue-hover);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+.get-app {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    position: relative;
+
+}
+
+.get-app:hover .mega-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.column h4 {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.column span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.column span:hover {
+    color: var(--dropbox-blue);
+}
+
+.get-app:hover {
+    color: var(--dropbox-blue-hover);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+.sign-up {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+
+}
+
+.sign-up:hover {
+    color: var(--dropbox-blue-hover);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+.login {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.login:hover {
+    color: var(--dropbox-blue-hover);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+.get-started {
+    font-size: 1rem;
+    color: var(--white);
+    padding: 0.8rem 0.8rem;
+    border-radius: 12px;
+    background-color: var(--dropbox-blue);
+    max-width: 200px;
+    width: fit-content;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.get-started:hover {
+    background-color: var(--dropbox-blue-hover);
+    transform: translateY(-2px);
+}
+
+/* MAIN*/
+.main {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+    background-color: var(--cream);
+
+}
+
+.main-left {
+    animation: slideLeft 1s ease-out forwards;
+}
+
+.main-right {
+    animation: slideRight 1s ease-out forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main-image img {
+    width: 100%;
+    height: 25rem;
+    border-radius: 10%;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+.main-text {
+    font-size: 1.3rem;
+    color: var(--black);
+    font-family: var(--heading);
+    font-weight: 400;
+    margin-bottom: 20%;
+    padding: 10rem 2rem;
+}
+
+.main-para {
+
+    font-weight: 200;
+    font-size: 1.3rem;
+    font-family: var(--body);
+    color: var(--gray);
+    font-weight: lighter;
+    max-width: 600px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    position: relative;
+}
+
+.dropbox-free {
+    font-size: 1rem;
+    color: var(--white);
+    padding: 1rem 1rem;
+    border-radius: 12px;
+    background-color: var(--dropbox-blue);
+    max-width: 200px;
+    width: max-content;
+    font-weight: 400;
+
+}
+
+.main-two {
+    font-size: 1.5rem;
+    font-family: var(--body);
+    line-height: 0.8;
+    color: var(--gray);
+    padding-bottom: 20px;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.company-slider {
+    width: 100%;
+    overflow: hidden;
+    background: var(--cream);
+    padding: 40px 0;
+}
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    color: var(--cream);
+    width: max-content;
+
+    animation: slide 8s linear infinite;
+}
+
+.logo-track img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-60%);
+    }
+}
+
+.logo-track:hover {
+    animation-play-state: paused;
+}
+
+.pause img {
+
+    height: 40px;
+    width: 100%;
+
+
+
+}
+
+.main-three {
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--body);
+
+    padding: 2rem 3rem;
+    width: 100%;
+
+    gap: 30px;
+
+}
+
+.find-it {
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+
+.get-to-text-reveal {
+    text-align: center;
+    color: var(--gray);
+}
+
+.dropbox-free-two {
+    font-size: 1rem;
+    color: var(--black);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    width: fix-content;
+    font-weight: 400;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    cursor: pointer;
+    width: max-content;
+    margin: 0 auto;
+
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-four-section {
+    background-color: var(--white)
+}
+
+.main-four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 32px;
+    background-color: var(--white);
+    gap: 80px;
+    margin-bottom: 100px;
+}
+
+.fashion {
+
+    width: 45%;
+
+}
+
+.fashion img {
+    width: 100%;
+    display: block;
+}
+
+.video {
+    height: auto;
+    width: 45%;
+    display: flex;
+    background-color: white;
+    overflow: visible;
+    padding-right: 600px;
+
+}
+
+.video video {
+
+    width: 700px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.everything-para {
+    font-weight: bold;
+    font-size: 1.75rem;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--body);
+    padding-top: 100px;
+    padding: 2rem 3rem;
+    width: 100%;
+
+    gap: 300px;
+    background-color: --white;
+
+
+}
+
+.para-two {
+    color: gray;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.learn-more {
+    font-size: 1rem;
+    color: var(--black);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    width: fix-content;
+    font-weight: 400;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    cursor: pointer;
+    width: max-content;
+
+}
+
+.dropbox-free-three {
+    font-size: 1rem;
+    color: var(--black);
+    padding: 1rem 1.5rem;
+
+
+    background-color: var(--white);
+    width: fix-content;
+    font-weight: 400;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    cursor: pointer;
+    width: max-content;
+
+}
+
+.section-5 {
+    background-color: var(--white);
+}
+
+.main-5 {
+    display: flex;
+    justify-content: center;
+padding: 80px 32px;
+    background-color: var(--white);
+    gap: 80px;
+    align-items:center
+  
+}
+
+
+.man-laptop,
+.video-two{
+    flex: 1;
+    max-width: 550px;
+}
+.man-laptop img {
+
+   width :100% ;
+    display: block;
+    
+}
+
+.video-two {
+    height: auto;
+ 
+    display: flex;
+    background-color: white;
+    overflow: visible;
+   
+}
+
+.video-two video {
+width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.footer {
+    background: #1e1919;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 80px 60px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.social-icons img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.language {
+    font-size: 14px;
+    cursor: pointer;
+}
+
